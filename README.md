@@ -52,10 +52,6 @@ shuffle.pick([1,2,3,4,5]); // returns 5
 shuffle.pick([1,2,3,4,5], { 'picks': 2 })); // returns [4, 3]
 ```
 
-## Build
-
-    npm run dist
-
 ## Test
 
     npm test
