@@ -1,6 +1,6 @@
 {
-  "name": "shuffle-array",
-  "repository": "git@github.com:pazguille/shuffle-array.git",
+  "name": "@lfdoherty/shuffle-array",
+  "repository": "git@github.com:lfdoherty/shuffle-array.git",
   "description": "Randomize the order of the elements in a given array.",
   "author": "Guille Paz <guille87paz@gmail.com>",
   "version": "2.0.0",

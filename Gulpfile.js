@@ -47,34 +47,6 @@ var umd = [
   ].join('\n');
 
 /**
- * Create directory
- */
-mkdirp('./dist');
-
-/**
- * Build task
- */
-gulp.task('build', function() {
-  mkdirp('./dist');
-  gulp.src('./index.js')
-    .pipe(header(prefix, { 'pkg' : pkg }))
-    .pipe(footer(postfix))
-    .pipe(replace('module.exports = ' + name + ';', umd))
-    .pipe(rename(pkg.name + '.js'))
-    .pipe(gulp.dest('./dist/'));
-});
-
-/**
- * Min task
- */
-gulp.task('min', function() {
-  gulp.src('./dist/' + pkg.name + '.js')
-    .pipe(ugifyjs())
-    .pipe(rename(pkg.name + '.min.js'))
-    .pipe(gulp.dest('./dist/'));
-});
-
-/**
  * Test task
  */
 gulp.task('test', function() {
@@ -85,4 +57,4 @@ gulp.task('test', function() {
 /**
  * Register tasks
  */
-gulp.task('default', ['build', 'min']);
+gulp.task('default', []);
