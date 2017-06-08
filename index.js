@@ -10,10 +10,7 @@
  */
 function shuffle(arr, options) {
 
-  if (!Array.isArray(arr)) {
-    throw new Error('shuffle expect an array as parameter.');
-  }
-
+ 
   options = options || {};
 
   var collection = arr,
@@ -23,7 +20,10 @@ function shuffle(arr, options) {
       temp;
 
   if (options.copy === true) {
-    collection = arr.slice();
+    if (!Array.isArray(arr)) {
+      throw new Error('shuffle expect an array as parameter, if you expect a copy.');
+    }
+   collection = arr.slice();
   }
 
   while (len) {
